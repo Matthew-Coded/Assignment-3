@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Knewave", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: 'wdth' 100;
+}
+
+.root {
+    --primary-color: black;
+    --secondary-color: white;
+    --accent-color: green;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 3fr 3fr 1fr ;
+    grid-template-areas: 
+    "header header header header"
+    "main main main aside"
+    "categories-main categories-main categories-main aside"
+    "footer footer footer footer";
+}
+
+/* Navbar */
+header {
+    background-color: aqua;
+    grid-area: header;
+    padding: 0 10dvh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 7dvh;
+    border-bottom: 1px solid grey;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.nav-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: auto 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: gray;
+}
+
+main {
+    background-color: greenyellow;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    /* justify-content: space-around; */
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+aside {
+    background-color: blueviolet;
+    grid-area: aside;
+}
+
+.categories-main {
+    background-color: yellow;
+    grid-area: categories-main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer {
+    background-color: red;
+    grid-area: footer;
+}
+
