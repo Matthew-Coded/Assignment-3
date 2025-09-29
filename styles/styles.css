@@ -144,6 +144,8 @@ main {
 aside {
     background-color: blueviolet;
     grid-area: aside;
+    display: flex;
+    flex-direction: column;
 }
 
 .categories-main {
